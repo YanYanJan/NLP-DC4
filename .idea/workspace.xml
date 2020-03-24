@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e519be8-fd3c-48ae-b484-2c67b5496524" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DC4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora_duplicate_questions.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DC4.py" beforeDir="false" afterPath="$PROJECT_DIR$/DC4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZHsoZWfh95zexYzoutkKYcDYKk" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -31,7 +32,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
@@ -86,25 +89,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="268" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584508569978">
+    <state x="268" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585016617196">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="268" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1584508569978" />
-    <state width="1142" height="175" key="GridCell.Tab.0.bottom" timestamp="1584508750891">
+    <state x="268" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1585016617196" />
+    <state x="558" y="236" key="EnvironmentVariablesDialog" timestamp="1585014982461">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1584508750891" />
-    <state width="1142" height="175" key="GridCell.Tab.0.center" timestamp="1584508750890">
+    <state x="558" y="236" key="EnvironmentVariablesDialog/0.23.1440.797@0.23.1440.797" timestamp="1585014982461" />
+    <state width="1142" height="175" key="GridCell.Tab.0.bottom" timestamp="1585024945702">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1584508750890" />
-    <state width="1142" height="175" key="GridCell.Tab.0.left" timestamp="1584508750889">
+    <state width="1142" height="175" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1585024945702" />
+    <state width="1142" height="175" key="GridCell.Tab.0.center" timestamp="1585024945700">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1584508750889" />
-    <state width="1142" height="175" key="GridCell.Tab.0.right" timestamp="1584508750890">
+    <state width="1142" height="175" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1585024945700" />
+    <state width="1142" height="175" key="GridCell.Tab.0.left" timestamp="1585024945700">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1584508750890" />
+    <state width="1142" height="175" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1585024945700" />
+    <state width="1142" height="175" key="GridCell.Tab.0.right" timestamp="1585024945701">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1142" height="175" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1585024945701" />
+    <state x="260" y="284" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585015537407">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="260" y="284" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.797@0.23.1440.797" timestamp="1585015537407" />
   </component>
 </project>
