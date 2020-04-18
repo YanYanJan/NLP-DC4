@@ -104,52 +104,49 @@ df['question2'] = df['question2'].apply(clean)
 
 # Vectorize the data
 #bag of word
-'''
+
 count_vect = CountVectorizer(analyzer='word', token_pattern=r'\w{1,}')
 count_vect.fit(pd.concat((df['question1'],df['question2'])).unique())
-trainq1_trans= count_vect.transform(df['question1'].values)
-trainq2_trans = count_vect.transform(df['question2'].values)
+trainq1_trans1 = count_vect.transform(df['question1'].values)
+trainq2_trans1 = count_vect.transform(df['question2'].values)
 
 labels = df['is_duplicate'].values
 import scipy
 from scipy.sparse import coo_matrix, hstack
 
 # Split the data in to training and testing
-X = scipy.sparse.hstack((trainq1_trans,trainq2_trans))
-y = labels
-X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.2, random_state = 1)
+X1 = scipy.sparse.hstack((trainq1_trans1,trainq2_trans1))
+y1 = labels
+X_train1,X_test1,y_train1,y_test1 = train_test_split(X1,y1, test_size = 0.2, random_state = 1)
 
 
-classifer = xgb.XGBClassifier(max_depth=50, n_estimators=80, learning_rate=0.1, colsample_bytree=.7, gamma=0, reg_alpha=4, objective='binary:logistic', eta=0.3, silent=1, subsample=0.8).fit(X_train, y_train)
-prediction = classifer.predict(X_test)
+classifer1 = xgb.XGBClassifier(max_depth=50, n_estimators=80, learning_rate=0.1, colsample_bytree=.7, gamma=0, reg_alpha=4, objective='binary:logistic', eta=0.3, silent=1, subsample=0.8).fit(X_train1, y_train1)
+prediction1 = classifer1.predict(X_test1)
 
 
 #Test for the performance
 from sklearn.metrics import f1_score, classification_report, accuracy_score, confusion_matrix
 
-print(classification_report(y_test ,prediction ))
-print('Confusion Matrix: \n',confusion_matrix(y_test,prediction))
-print('Accuracy: ', accuracy_score(y_test,prediction))
-'''
+print(classification_report(y_test1 ,prediction1 ))
+print('Confusion Matrix: \n',confusion_matrix(y_test1,prediction1))
+print('Accuracy: ', accuracy_score(y_test1,prediction1))
 
-import scipy
-from scipy.sparse import coo_matrix, hstack
-
+# TF-IDF
 tfidf_vect = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', max_features=5000)
 tfidf_vect.fit(pd.concat((df['question1'],df['question2'])).unique())
-trainq1_trans = tfidf_vect.transform(df['question1'].values)
-trainq2_trans = tfidf_vect.transform(df['question2'].values)
-labels = df['is_duplicate'].values
-X = scipy.sparse.hstack((trainq1_trans,trainq2_trans))
-y = labels
-X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.33, random_state = 42)
+trainq1_trans2 = tfidf_vect.transform(df['question1'].values)
+trainq2_trans2 = tfidf_vect.transform(df['question2'].values)
 
-classifer = xgb.XGBClassifier(max_depth=50, n_estimators=80, learning_rate=0.1, colsample_bytree=.7, gamma=0, reg_alpha=4, objective='binary:logistic', eta=0.3, silent=1, subsample=0.8).fit(X_train, y_train)
-prediction = classifer.predict(X_test)
+X2 = scipy.sparse.hstack((trainq1_trans2,trainq2_trans2))
+y2 = labels
+X_train2,X_test2,y_train2,y_test2 = train_test_split(X2,y2, test_size = 0.33, random_state = 42)
+
+classifer2 = xgb.XGBClassifier(max_depth=50, n_estimators=80, learning_rate=0.1, colsample_bytree=.7, gamma=0, reg_alpha=4, objective='binary:logistic', eta=0.3, silent=1, subsample=0.8).fit(X_train2, y_train2)
+prediction2 = classifer2.predict(X_test2)
 
 #Test for the performance
 from sklearn.metrics import f1_score, classification_report, accuracy_score, confusion_matrix
 
-print(classification_report(y_test ,prediction ))
-print('Confusion Matrix: \n',confusion_matrix(y_test,prediction))
-print('Accuracy: ', accuracy_score(y_test,prediction))
+print(classification_report(y_test2 ,prediction2 ))
+print('Confusion Matrix: \n',confusion_matrix(y_test2,prediction2))
+print('Accuracy: ', accuracy_score(y_test2,prediction2))
