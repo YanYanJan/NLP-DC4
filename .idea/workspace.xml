@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e519be8-fd3c-48ae-b484-2c67b5496524" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DC4.py" beforeDir="false" afterPath="$PROJECT_DIR$/DC4.py" afterDir="false" />
     </list>
@@ -36,6 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="DC4" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -97,22 +97,30 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="558" y="236" key="EnvironmentVariablesDialog/0.23.1440.797@0.23.1440.797" timestamp="1585014982461" />
-    <state width="1142" height="175" key="GridCell.Tab.0.bottom" timestamp="1585024945702">
+    <state width="1142" height="188" key="GridCell.Tab.0.bottom" timestamp="1587147446521">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1585024945702" />
-    <state width="1142" height="175" key="GridCell.Tab.0.center" timestamp="1585024945700">
+    <state width="1142" height="188" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1587147446521" />
+    <state width="1142" height="188" key="GridCell.Tab.0.center" timestamp="1587147446520">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1585024945700" />
-    <state width="1142" height="175" key="GridCell.Tab.0.left" timestamp="1585024945700">
+    <state width="1142" height="188" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1587147446520" />
+    <state width="1142" height="188" key="GridCell.Tab.0.left" timestamp="1587147446519">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1585024945700" />
-    <state width="1142" height="175" key="GridCell.Tab.0.right" timestamp="1585024945701">
+    <state width="1142" height="188" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1587147446519" />
+    <state width="1142" height="188" key="GridCell.Tab.0.right" timestamp="1587147446521">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1142" height="175" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1585024945701" />
+    <state width="1142" height="188" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1587147446521" />
+    <state x="171" y="23" key="SettingsEditor" timestamp="1586472152206">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="171" y="23" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1586472152206" />
+    <state x="333" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1586472126001">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="333" y="212" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1586472126001" />
     <state x="260" y="284" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585015537407">
       <screen x="0" y="23" width="1440" height="797" />
     </state>

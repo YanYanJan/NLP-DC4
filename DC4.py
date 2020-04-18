@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
 import re,os
@@ -103,13 +103,14 @@ df['question2'] = df['question2'].apply(clean)
 
 
 # Vectorize the data
-
+#bag of word
+'''
 count_vect = CountVectorizer(analyzer='word', token_pattern=r'\w{1,}')
 count_vect.fit(pd.concat((df['question1'],df['question2'])).unique())
-trainq1_trans = count_vect.transform(df['question1'].values)
+trainq1_trans= count_vect.transform(df['question1'].values)
 trainq2_trans = count_vect.transform(df['question2'].values)
-labels = df['is_duplicate'].values
 
+labels = df['is_duplicate'].values
 import scipy
 from scipy.sparse import coo_matrix, hstack
 
@@ -119,10 +120,32 @@ y = labels
 X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.2, random_state = 1)
 
 
-## Thanks to xgboost it takes care of a lot of things
 classifer = xgb.XGBClassifier(max_depth=50, n_estimators=80, learning_rate=0.1, colsample_bytree=.7, gamma=0, reg_alpha=4, objective='binary:logistic', eta=0.3, silent=1, subsample=0.8).fit(X_train, y_train)
 prediction = classifer.predict(X_test)
 
+
+#Test for the performance
+from sklearn.metrics import f1_score, classification_report, accuracy_score, confusion_matrix
+
+print(classification_report(y_test ,prediction ))
+print('Confusion Matrix: \n',confusion_matrix(y_test,prediction))
+print('Accuracy: ', accuracy_score(y_test,prediction))
+'''
+
+import scipy
+from scipy.sparse import coo_matrix, hstack
+
+tfidf_vect = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', max_features=5000)
+tfidf_vect.fit(pd.concat((df['question1'],df['question2'])).unique())
+trainq1_trans = tfidf_vect.transform(df['question1'].values)
+trainq2_trans = tfidf_vect.transform(df['question2'].values)
+labels = df['is_duplicate'].values
+X = scipy.sparse.hstack((trainq1_trans,trainq2_trans))
+y = labels
+X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.33, random_state = 42)
+
+classifer = xgb.XGBClassifier(max_depth=50, n_estimators=80, learning_rate=0.1, colsample_bytree=.7, gamma=0, reg_alpha=4, objective='binary:logistic', eta=0.3, silent=1, subsample=0.8).fit(X_train, y_train)
+prediction = classifer.predict(X_test)
 
 #Test for the performance
 from sklearn.metrics import f1_score, classification_report, accuracy_score, confusion_matrix
